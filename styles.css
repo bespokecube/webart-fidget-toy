@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* background-color: #000; */
+  background: linear-gradient(to bottom, #000000 10%, #66a3d8 100%);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  --link-color-light: #a3c1da;
+  --link-color-dark: #060a0d;
+}
+
+#root {
+  overflow: auto;
+}
+
+a,
+a:visited {
+  color: var(--link-color-dark);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+}
+
+.perf-monitor-toggle-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 100;
+  opacity: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 100;
+  padding: 10px 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: calc(100% - 80px);
+}
+
+footer > span {
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+  position: relative;
+  color: var(--link-color-dark);
+  display: inline-block;
+  margin-right: 15px;
+  padding-right: 15px;
+}
+
+footer > span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: #060a0d;
+}
+
+footer > span:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+footer > span:last-of-type:before {
+  display: none;
+}
+
+footer:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.preloader {
+  width: 60px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, #ffffff 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 100%;
+  animation: l7 1s infinite linear;
+}
+
+.sound-control {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.sound-control button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--link-color-light);
+  border-radius: 5px;
+  padding: 8px 8px 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-weight: bold;
+}
+
+.sound-control svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--link-color-dark);
+  transition: all 0.5s ease;
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100% / 3) 0%, calc(100% / 3) 100%, calc(100% / 3) 100%;
+  }
+  50% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 0%, calc(100% / 3) 100%;
+  }
+  66% {
+    background-size: calc(100% / 3) 100%, calc(100% / 3) 100%, calc(100% / 3) 0%;
+  }
+}

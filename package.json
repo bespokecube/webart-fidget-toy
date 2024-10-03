@@ -1,0 +1,31 @@
+{
+  "name": "webart-fidget-toy",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "author": "Oleg Rybin",
+  "repository": "https://github.com/bespokecube/webart-fidget-toy",
+  "license": "CC BY 4.0",
+  "dependencies": {
+    "@react-three/drei": "9.108.1",
+    "@react-three/fiber": "8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
+    "postprocessing": "^6.36.2",
+    "r3f-perf": "^7.2.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "^0.168.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "4.3.1",
+    "vite": "5.3.3",
+    "vite-plugin-static-copy": "1.0.6"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  },
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build"
+  }
+}
