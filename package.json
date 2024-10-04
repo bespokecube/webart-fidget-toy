@@ -7,6 +7,8 @@
   "repository": "https://github.com/bespokecube/webart-fidget-toy",
   "license": "CC BY 4.0",
   "dependencies": {
+    "@react-spring/three": "^9.7.4",
+    "@react-spring/web": "^9.7.4",
     "@react-three/drei": "9.108.1",
     "@react-three/fiber": "8.16.8",
     "@react-three/postprocessing": "^2.16.2",

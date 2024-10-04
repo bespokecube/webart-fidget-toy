@@ -22,7 +22,7 @@ export function Fidget(props) {
 
   return (
     <group {...props} dispose={null}>
-      <mesh castShadow receiveShadow geometry={nodes.Cube009.geometry} material={nodes.Cube009.material} position={[0, 0, 0]}>
+      <mesh geometry={nodes.Cube009.geometry} material={nodes.Cube009.material} position={[0, 0, 0]}>
         <meshStandardMaterial
           color='#FFFFFF'
           roughness={0.5}
