@@ -13,13 +13,25 @@ export function Fidget(props) {
   const { nodes, material } = useGLTF("/fidget.glb");
   const roughnessMap = useTexture("./fidget_roughness_map.png");
   const albedo = useTexture("./fidget_albedo.png");
+  const normal = useTexture("./fidget_normal.png");
+  const ao = useTexture("./fidget_AO.png");
   roughnessMap.flipY = false;
   albedo.flipY = false;
+  normal.flipY = false;
+  ao.flipY = false;
 
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes.Cube009.geometry} material={nodes.Cube009.material} position={[0, 0, 0]}>
-        <meshStandardMaterial color='#FFFFFF' roughness={0.5} roughnessMap={roughnessMap} metalness={0.1} map={albedo} />
+        <meshStandardMaterial
+          color='#FFFFFF'
+          roughness={0.5}
+          roughnessMap={roughnessMap}
+          metalness={0.1}
+          normalMap={normal}
+          aoMap={ao}
+          map={albedo}
+        />
       </mesh>
       <Switch />
       <Switch position={[0, 0, -0.62]} />

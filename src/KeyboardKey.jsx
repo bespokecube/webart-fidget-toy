@@ -8,7 +8,7 @@ export function KeyboardKey(props) {
   return (
     <group {...props} dispose={null}>
       <mesh castShadow receiveShadow geometry={nodes.Cube002.geometry} position={[0.5, -1.03, 0.5]} rotation={[-Math.PI / 2, 0, 0]}>
-        <meshStandardMaterial color='#0E995F' roughness={0.5} roughnessMap={roughnessMap} />
+        <meshStandardMaterial color='#117D2F' roughness={0.5} roughnessMap={roughnessMap} />
       </mesh>
     </group>
   );
