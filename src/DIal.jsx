@@ -5,7 +5,7 @@ import { easings } from "@react-spring/web";
 
 export function Dial(props) {
   const { nodes, materials } = useGLTF("/fidget_dial.glb");
-  const roughnessMap = useTexture("./fidget_roughness_map.png");
+  const roughnessMap = useTexture("./fidget_roughness.jpg");
   const albedo = useTexture("./fidget_albedo.png");
 
   roughnessMap.flipY = false;

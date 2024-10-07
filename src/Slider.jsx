@@ -9,7 +9,7 @@ import { easings } from "@react-spring/web";
 
 export function Slider(props) {
   const { nodes, materials } = useGLTF("/fidget_slider.glb");
-  const roughnessMap = useTexture("./fidget_roughness_map.png");
+  const roughnessMap = useTexture("./fidget_roughness.jpg");
 
   const defaultPositionX = 0.5;
 

@@ -15,8 +15,10 @@ const Scene = () => {
       </Center>
       <Environment preset='warehouse' blur={1} intensity={1} />
       <ambientLight intensity={0.9} />
-      <pointLight position={[1, 10, 1]} intensity={100} />
+      <pointLight position={[1, 10, 1]} intensity={300} />
       <pointLight position={[1, -10, 1]} intensity={100} />
+      <pointLight position={[10, 1, 1]} intensity={100} />
+      <pointLight position={[1, 1, 10]} intensity={50} />
     </>
   );
 };
@@ -37,7 +39,6 @@ const App = () => {
         </Suspense>
         <EffectComposer>
           <ToneMapping mode={ToneMappingMode.NEUTRAL} />
-          {/* <Bloom mipmapBlur intensity={0.1} luminanceThreshold={0.3} levels={3} luminanceSmoothing={0.4} /> */}
         </EffectComposer>
       </Canvas>
     </>

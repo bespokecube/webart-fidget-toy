@@ -11,7 +11,7 @@ main,
   margin: 0;
   padding: 0;
   /* background-color: #000; */
-  background: linear-gradient(to bottom, #000000 10%, #66a3d8 100%);
+  background: radial-gradient(#101030 20%, #66ceff);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

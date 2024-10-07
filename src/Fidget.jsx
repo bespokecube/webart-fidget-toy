@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 import { Switch } from "./Switch";
 import { Dial } from "./DIal";
@@ -11,27 +11,21 @@ import { KeyboardKey } from "./KeyboardKey";
 
 export function Fidget(props) {
   const { nodes, material } = useGLTF("/fidget.glb");
-  const roughnessMap = useTexture("./fidget_roughness_map.png");
+  const roughnessMap = useTexture("./fidget_roughness.jpg");
   const albedo = useTexture("./fidget_albedo.png");
-  const normal = useTexture("./fidget_normal.png");
   const ao = useTexture("./fidget_AO.png");
   roughnessMap.flipY = false;
   albedo.flipY = false;
-  normal.flipY = false;
   ao.flipY = false;
+
+  function smallButtonClickHandler() {
+    console.log("UPDATE");
+  }
 
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Cube009.geometry} material={nodes.Cube009.material} position={[0, 0, 0]}>
-        <meshStandardMaterial
-          color='#FFFFFF'
-          roughness={0.5}
-          roughnessMap={roughnessMap}
-          metalness={0.1}
-          normalMap={normal}
-          aoMap={ao}
-          map={albedo}
-        />
+        <meshStandardMaterial color='#FFFFFF' roughness={0.5} roughnessMap={roughnessMap} metalness={0.1} aoMap={ao} map={albedo} />
       </mesh>
       <Switch />
       <Switch position={[0, 0, -0.62]} />
@@ -46,7 +40,7 @@ export function Fidget(props) {
       <LargeButton position={[0, 0, 1]} />
       <LargeButton position={[0, -1, 1]} />
       <LargeButton position={[0, -1, 0]} />
-      <SmallButton />
+      <SmallButton clickHandler={smallButtonClickHandler} />
       <KeyboardKey />
       <KeyboardKey position={[-1, 0, 0]} />
       <KeyboardKey position={[-1, 0, -1]} />

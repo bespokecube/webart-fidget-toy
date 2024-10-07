@@ -5,8 +5,7 @@ import { easings } from "@react-spring/web";
 
 export function SmallButton(props) {
   const { nodes, materials } = useGLTF("/fidget_button_small.glb");
-  const roughnessMap = useTexture("./fidget_roughness_map.png");
-
+  const roughnessMap = useTexture("./fidget_roughness.jpg");
   const defaultPositionX = 0.947;
 
   const meshRef = useRef();

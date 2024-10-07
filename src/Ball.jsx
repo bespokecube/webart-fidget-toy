@@ -5,7 +5,7 @@ import { easings } from "@react-spring/web";
 
 export function Ball(props) {
   const { nodes, materials } = useGLTF("/fidget_ball.glb");
-  const roughnessMap = useTexture("./fidget_roughness_map.png");
+  const roughnessMap = useTexture("./fidget_roughness.jpg");
 
   const meshRef = useRef();
 
