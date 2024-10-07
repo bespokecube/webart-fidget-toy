@@ -2,7 +2,7 @@
 
 ["Fidget Toy"](https://webart-fidget-toy.bespokecube.com/) is an experiemnt I created using [Blender](https://www.blender.org/) and [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction).
 
-![Artwork thumbnail](https://webart-marble-tower.bespokecube.com/webart-fidget-toy_thumbnail.jpg)
+![Artwork thumbnail](https://webart-fidget-toy.bespokecube.com/webart-fidget-toy_thumbnail.jpg)
 
 ### The goal was to practice creating a minimal functional example that combines the following:
 
